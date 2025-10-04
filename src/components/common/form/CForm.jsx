@@ -143,6 +143,16 @@ const CForm = memo(
                     required={f?.required}
                   />
                 </Col>
+              ) : f.type === "button" ? (
+                <Col key={i} sm={f?.sm ?? 12} className="my-2">
+                  <CButton
+                    style={{ width: "auto" }}
+                    onClick={f.doSubmit ? handleSubmit : f.onClick}
+                    variant={f.variant}
+                    loading={f.type === "submit" ? loading : f.loading}
+                    label={f.label}
+                  />
+                </Col>
               ) : (
                 <Col key={i} sm={f?.sm ?? 12} className="my-2">
                   <CInput

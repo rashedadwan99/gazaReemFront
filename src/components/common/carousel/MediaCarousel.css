@@ -1,25 +1,27 @@
-/* الوضع الافتراضي: الأسهم خارج الصورة */
 .media-carousel {
   padding: 10px;
 }
 
-.media-carousel .carousel-control-prev {
-  left: -30px !important;
-}
 
-.media-carousel .carousel-control-next {
-  right: -30px;
-}
 
-/* تصغير حجم الأيقونات */
-.media-carousel .carousel-control-prev-icon,
-.media-carousel .carousel-control-next-icon {
-  background-size: 75% 75%;
+
+.media-carousel .carousel-indicators button {
+  width: 8px !important;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 6px;
+  background-color: var(--white);
 }
 
 .media-carousel .carousel-indicators {
-  bottom: -25px;
-  /* نزّل الدوتس تحت الصورة بـ 25px */
+  bottom: -60px !important;
+  width: 80px;
+  margin: 0 auto;
+  height: 25px !important;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: var(--light-blue) !important;
 }
 
 /* شاشات صغيرة: خلي الأسهم أقرب أو داخل الصورة */
@@ -36,7 +38,7 @@
 
 /* اعادة تحديد مكان الدوتس (indicators) */
 .media-carousel .carousel-indicators {
-  bottom: -25px;
+  bottom: -50px;
   /* نزّل الدوتس تحت الصورة بـ 25px */
 }
 
@@ -50,7 +52,7 @@
 
 /* لون النقطة المختارة */
 .media-carousel .carousel-indicators .active {
-  background-color: var(--dark-blue);
+  /* background-color: var(--dark-blue); */
   /* أو أي لون تفضله */
 }
 

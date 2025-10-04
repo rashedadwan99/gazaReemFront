@@ -3,12 +3,13 @@ import { Carousel } from "react-bootstrap";
 import Cimg from "../image/Cimg";
 import "./MediaCarousel.css"; // استيراد ملف الـ CSS المخصص
 
-const MediaCarousel = ({ images = [], video = null, height = 100 }) => {
+const MediaCarousel = ({ images = [], video = null, height = 350 }) => {
   return (
     <Carousel
       indicators={true}
       interval={null}
       variant="dark"
+      controls={false}
       className="media-carousel"
     >
       {images.map((img, index) => (
@@ -18,7 +19,7 @@ const MediaCarousel = ({ images = [], video = null, height = 100 }) => {
               src={img}
               alt={`slide-${index}`}
               style={{
-                width: "95%",
+                width: "100%",
                 height,
                 objectFit: "contain",
                 borderRadius: 8,

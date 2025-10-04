@@ -1,5 +1,8 @@
 .auth_page {
-  background-color: var(--white);
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  background-color: rgba(242, 244, 247);
 }
 
 
@@ -8,6 +11,16 @@
   width: 100%;
   height: 400px;
 }
+
+.auth_page .first-sec {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+
+
 
 @media (max-width:992px) {
 

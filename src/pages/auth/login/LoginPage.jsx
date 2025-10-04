@@ -52,25 +52,25 @@ function LoginPage() {
       name: "password",
       required: true,
     },
-    {
-      buttons: [
-        {
-          sm: 12,
-          label: "login",
-          type: "submit",
-          variant: "contained",
-        },
 
-        {
-          sm: 12,
-          label: "f-pass",
-          onClick: () => {
-            navigate(routes.forgetPasswordGlobalRoute);
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          },
-          variant: "text",
-        },
-      ],
+    {
+      sm: 12,
+      label: "f-pass",
+      type: "button",
+
+      onClick: () => {
+        navigate(routes.forgetPasswordGlobalRoute);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      },
+      variant: "text",
+    },
+    {
+      sm: 12,
+      label: "login",
+      type: "button",
+
+      variant: "contained",
+      doSubmit: true,
     },
   ];
 

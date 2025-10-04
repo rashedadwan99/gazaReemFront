@@ -1,7 +1,20 @@
+form {
+  height: 100%;
+}
+
 form .MuiInputBase-root,
 form input,
 form .MuiFormControl-root {
   width: 100% !important;
+}
+
+/* MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input */
+form input.MuiInputBase-input {
+  background-color: var(--light-gray);
+}
+
+form input.MuiInputBase-root {
+  border-radius: 12px !important;
 }
 
 form input,
