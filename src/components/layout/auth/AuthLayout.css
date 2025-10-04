@@ -1,0 +1,17 @@
+.auth_page {
+  background-color: var(--white);
+}
+
+
+
+.auth_page_img {
+  width: 100%;
+  height: 400px;
+}
+
+@media (max-width:992px) {
+
+  .auth_page_img {
+    display: none;
+  }
+}

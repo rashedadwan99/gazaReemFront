@@ -1,0 +1,8 @@
+.react-tel-input .form-control {
+  height: 55px !important;
+  padding: 16.5px inherit !important;
+}
+
+.react-tel-input {
+  direction: ltr !important;
+}
