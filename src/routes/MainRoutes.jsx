@@ -4,6 +4,7 @@ import LoginPage from "../pages/auth/login/LoginPage";
 import HomePage from "../pages/home/HomePage";
 import { useSelector } from "react-redux";
 import ResetPassword from "../pages/auth/reset-password/ResetPassword";
+import ResetPasswordForm from "../pages/auth/reset-password/ResetPasswordForm";
 
 function MainRoutes() {
   const { isAuth } = useSelector((state) => state.user);
@@ -24,6 +25,12 @@ function MainRoutes() {
           !isAuth ? <ResetPassword /> : <Navigate to={routes.loginRoute} />
         }
         path={routes.forgetPasswordGlobalRoute}
+      />
+      <Route
+        element={
+          !isAuth ? <ResetPasswordForm /> : <Navigate to={routes.loginRoute} />
+        }
+        path={routes.forgetPasswordRoute}
       />
     </Routes>
   );

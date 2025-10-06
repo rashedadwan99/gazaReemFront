@@ -8,10 +8,11 @@ const MediaCarousel = ({ images = [], video = null, height = 350 }) => {
     <>
       <Carousel
         indicators={true}
-        interval={null}
+        interval={2000}
         variant="dark"
         controls={false}
         className="media-carousel"
+        wrap={true}
       >
         {images.map((img, index) => (
           <Carousel.Item key={index}>

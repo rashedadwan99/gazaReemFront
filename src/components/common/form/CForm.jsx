@@ -51,7 +51,7 @@ const CForm = memo(
                   return b.isOneBtn ? (
                     <Row key={i}>
                       <CButton
-                        style={{ width: "auto" }}
+                        // style={{ width: "auto" }}
                         onClick={b.type === "submit" ? handleSubmit : b.onClick}
                         variant={b.variant}
                         loading={b.type === "submit" ? loading : b.loading}
@@ -61,7 +61,7 @@ const CForm = memo(
                   ) : (
                     <CButton
                       key={i}
-                      style={{ width: "auto" }}
+                      // style={{ width: "auto" }}
                       onClick={b.type === "submit" ? handleSubmit : b.onClick}
                       variant={b.variant}
                       loading={b.type === "submit" ? loading : b.loading}
@@ -136,9 +136,9 @@ const CForm = memo(
                   />
                 </Col>
               ) : f.type === "button" ? (
-                <Col key={i} sm={f?.sm ?? 12} className="my-2">
+                <Col key={i} sm={f?.sm ?? 12} className="my-1">
                   <CButton
-                    style={{ width: "auto" }}
+                    style={{ width: f.width ? "auto" : "100%" }}
                     onClick={f.doSubmit ? handleSubmit : f.onClick}
                     variant={f.variant}
                     loading={f.type === "submit" ? loading : f.loading}

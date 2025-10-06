@@ -35,8 +35,8 @@ export const getAllUsersService = () => {
   return http.get(apiEndpoint + "/all");
 };
 
-export const sendResetCodeService = (email) => {
-  return http.post(apiEndpoint + "/send-reset-code", { email });
+export const sendResetLinkService = (email) => {
+  return http.post(apiEndpoint + "/reset-password", { email });
 };
 
 export const verifyResetCodeAndSetPasswordService = (data) => {

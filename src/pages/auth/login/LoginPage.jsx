@@ -56,6 +56,7 @@ function LoginPage() {
     {
       sm: 12,
       label: "f-pass",
+      width: "auto",
       type: "button",
 
       onClick: () => {
@@ -65,6 +66,8 @@ function LoginPage() {
       variant: "text",
     },
     {
+      width: "auto",
+
       sm: 12,
       label: "login",
       type: "button",
