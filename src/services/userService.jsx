@@ -39,6 +39,6 @@ export const handleGetLinkService = (email) => {
   console.log(email);
   return http.post(apiEndpoint + "/check_email", { email });
 };
-export const changePassService = (password) => {
-  return http.post(apiEndpoint + "/change-password", { password });
+export const changePassService = ({ api_token, password }) => {
+  return http.post(apiEndpoint + "/change-password", { password, api_token });
 };

@@ -1,23 +1,25 @@
 import { useState } from "react";
 import CForm from "../../../components/common/form/CForm";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { routes } from "../../../routes/routes";
 import { CToast } from "../../../components/common/toast/CToast";
 import ResetPass from "../../../components/layout/resetpassLayout/ResetPass";
+import { changePassService } from "../../../services/userService";
 
 function ResetPassword() {
   const navigate = useNavigate();
-
+  const { api_token } = useParams();
   const [data, setData] = useState({
     password: "",
+    api_token: api_token,
   });
 
   const handleSendCode = async () => {
     try {
-      await sendResetLinkService(data.password);
-      CToast("success", "Code sent to your password");
+      const { responseData } = await changePassService(data);
+      CToast("success", responseData.mesage);
     } catch (err) {
-      CToast("error", err.response?.data?.message || "Failed to send code");
+      // CToast("error", err.response?.data?.message || "Failed to send code");
     }
   };
 
