@@ -10,7 +10,7 @@ const availableLanguages = ["en", "ar"];
 const localStorageKey = "selectedLanguageAtlas";
 
 // Load saved language or fallback to 'en'
-const savedLanguage = localStorage.getItem(localStorageKey) || "en";
+const savedLanguage = localStorage.getItem(localStorageKey) || "ar";
 // Make sure it's a valid language (optional safety check)
 const initialLanguage = availableLanguages.includes(savedLanguage)
   ? savedLanguage
