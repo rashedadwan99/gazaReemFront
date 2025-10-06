@@ -3,10 +3,6 @@ import CForm from "../../../components/common/form/CForm";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../../../routes/routes";
 import { CToast } from "../../../components/common/toast/CToast";
-import {
-  sendResetLinkService,
-  verifyResetCodeAndSetPasswordService,
-} from "../../../services/userService";
 import ResetPass from "../../../components/layout/resetpassLayout/ResetPass";
 
 function ResetPassword() {

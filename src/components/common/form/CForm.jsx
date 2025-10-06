@@ -49,7 +49,7 @@ const CForm = memo(
                 {f?.buttons?.map((b, i) => {
                   if (!b.label) return;
                   return b.isOneBtn ? (
-                    <Row key={i}>
+                    <Row key={b.label}>
                       <CButton
                         // style={{ width: "auto" }}
                         onClick={b.type === "submit" ? handleSubmit : b.onClick}
