@@ -18,8 +18,8 @@ function ResetPassword() {
   const handleSendCode = async () => {
     try {
       setLoading(true);
-      const { responseData } = await changePassService(data);
-      CToast("success", responseData.mesage);
+      const { data: responseData } = await changePassService(data);
+      CToast("success", responseData.message);
 
       setLoading(false);
       navigate(routes.loginRoute, { replace: true });
