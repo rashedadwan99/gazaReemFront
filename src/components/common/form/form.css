@@ -8,13 +8,16 @@ form .MuiFormControl-root {
   width: 100% !important;
 }
 
-/* MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input */
 form input.MuiInputBase-input {
   background-color: var(--light-gray);
 }
 
 form input.MuiInputBase-root {
   border-radius: 12px !important;
+}
+
+form .sub_title {
+  font-size: 14px;
 }
 
 form input,

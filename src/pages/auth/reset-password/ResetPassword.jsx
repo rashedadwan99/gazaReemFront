@@ -8,6 +8,7 @@ import {
   sendResetCodeService,
   verifyResetCodeAndSetPasswordService,
 } from "../../../services/userService";
+import ResetPass from "../../../components/layout/resetpassLayout/ResetPass";
 
 function ResetPassword() {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ function ResetPassword() {
 
   const fields = [
     {
-      label: "Email",
+      label: "email",
       type: "email",
       name: "email",
       value: data.email,
@@ -40,12 +41,12 @@ function ResetPassword() {
           sm: 6,
 
           type: "submit",
-          label: "Send Code",
+          label: "send",
           variant: "contained",
         },
         {
           sm: 6,
-          label: "Back",
+          label: "back",
           variant: "outlined",
           onClick: () => {
             navigate(routes.loginRoute);
@@ -56,15 +57,16 @@ function ResetPassword() {
   ];
 
   return (
-    <AuthLayout>
+    <ResetPass>
       <CForm
         fields={fields}
         setData={setData}
         data={data}
-        title="Reset Password"
+        title="r-pass"
+        subTitle="enter_email"
         doSubmit={handleSendCode}
       />
-    </AuthLayout>
+    </ResetPass>
   );
 }
 

@@ -4,10 +4,9 @@ import { initReactI18next } from "react-i18next";
 // Translations
 import ar from "./assets/translation/ar.json";
 import en from "./assets/translation/en.json";
-import fr from "./assets/translation/fr.json";
 
 // Supported languages
-const availableLanguages = ["en", "ar", "fr"];
+const availableLanguages = ["en", "ar"];
 const localStorageKey = "selectedLanguageAtlas";
 
 // Load saved language or fallback to 'en'
@@ -21,7 +20,6 @@ const initialLanguage = availableLanguages.includes(savedLanguage)
 const resources = {
   ar: { translation: ar },
   en: { translation: en },
-  fr: { translation: fr },
 };
 
 // Initialize i18n

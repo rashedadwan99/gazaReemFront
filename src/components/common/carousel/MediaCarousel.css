@@ -50,11 +50,7 @@
   margin: 0 6px;
 }
 
-/* لون النقطة المختارة */
-.media-carousel .carousel-indicators .active {
-  /* background-color: var(--dark-blue); */
-  /* أو أي لون تفضله */
-}
+
 
 /* اجعل الدوتس تبقى تحت الصورة حتى في الشاشات الصغيرة */
 @media (max-width: 768px) {

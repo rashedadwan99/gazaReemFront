@@ -12,16 +12,7 @@ import CSelect from "./CSelect";
 import { Checkbox } from "@mui/material";
 import CPhoneInput from "./CPhone";
 const CForm = memo(
-  ({
-    data,
-    fields,
-    setData,
-    loading,
-    title,
-    doSubmit,
-
-    customOnChange,
-  }) => {
+  ({ data, fields, setData, loading, title, doSubmit, subTitle }) => {
     const { t } = useTranslation();
     const CToast = useToast();
     const handleSubmit = useCallback(
@@ -50,6 +41,7 @@ const CForm = memo(
         style={isArabic ? { direction: "rtl" } : {}}
       >
         <h3>{t(title)}</h3>
+        <span className="sub_title">{t(subTitle)}</span>
         {fields?.map((f, i) => {
           return f.buttons ? (
             <Row className="justify-content-center">
