@@ -55,6 +55,6 @@
 /* اجعل الدوتس تبقى تحت الصورة حتى في الشاشات الصغيرة */
 @media (max-width: 768px) {
   .media-carousel .carousel-indicators {
-    bottom: -20px;
+    bottom: -20px !important;
   }
 }
