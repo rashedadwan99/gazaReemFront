@@ -28,7 +28,11 @@
   height: 130px;
 }
 
-.auth_page span {
+.auth_page .first-sec_caption h5 {
+  text-align: right;
+}
+
+.auth_page .first-sec_caption span {
   font-size: 12px;
   text-align: center;
 }
