@@ -8,7 +8,8 @@ form .MuiFormControl-root {
   width: 100% !important;
 }
 
-form input.MuiInputBase-input {
+form input.MuiInputBase-input,
+form .MuiFormControl-root {
   background-color: var(--light-gray);
 }
 

@@ -7,7 +7,7 @@ function ResetPass({ children, className }) {
       <Row
         className={`reset-pass justify-content-center align-items-center ${className}`}
       >
-        <Col xs={12} sm={12} md={6} lg={5} className="reset-pass-form p-5">
+        <Col xs={11} sm={11} md={6} lg={5} className="reset-pass-form p-5">
           {children}
         </Col>
       </Row>
