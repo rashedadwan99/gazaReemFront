@@ -1,7 +1,7 @@
 .auth_page {
-  height: 100vh;
   display: flex;
   background-color: var(--light-gray);
+
 }
 
 
@@ -13,7 +13,7 @@
 
 
 .auth_page .first-sec {
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

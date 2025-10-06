@@ -8,6 +8,7 @@ import { changePassService } from "../../../services/userService";
 
 function ResetPassword() {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const { api_token } = useParams();
   const [data, setData] = useState({
     password: "",
@@ -16,10 +17,14 @@ function ResetPassword() {
 
   const handleSendCode = async () => {
     try {
+      setLoading(true);
       const { responseData } = await changePassService(data);
       CToast("success", responseData.mesage);
+
+      setLoading(false);
+      navigate(routes.loginRoute, { replace: true });
     } catch (err) {
-      // CToast("error", err.response?.data?.message || "Failed to send code");
+      setLoading(false);
     }
   };
 
@@ -38,6 +43,7 @@ function ResetPassword() {
       doSubmit: true,
       label: "save",
       variant: "contained",
+      loading: loading,
     },
     {
       sm: 12,

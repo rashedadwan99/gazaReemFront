@@ -14,7 +14,7 @@ function AuthLayoutComponent({ children, className = "" }) {
       <Row
         className={`auth_page justify-content-center align-items-center ${className}`}
       >
-        <Col xs={11} sm={11} md={6} lg={6} className="py-3 first-sec">
+        <Col xs={12} sm={12} md={6} lg={6} className="py-3 first-sec">
           <Row>
             <MediaCarousel images={[first, second, last]} />
             <div className="first-sec_caption">

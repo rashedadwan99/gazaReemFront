@@ -56,6 +56,7 @@ function ResetPassword() {
       doSubmit: true,
       label: "إرسال الرابط",
       variant: "contained",
+      loading: loading,
     },
     {
       sm: 12,
@@ -75,7 +76,6 @@ function ResetPassword() {
         title="إعادة تعيين كلمة المرور"
         subTitle="أدخل بريدك الإلكتروني لإرسال رابط التعيين"
         doSubmit={handleSendCode}
-        loading={loading}
       />
     </ResetPass>
   );

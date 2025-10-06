@@ -44,7 +44,7 @@ const CForm = memo(
         <span className="sub_title">{t(subTitle)}</span>
         {fields?.map((f, i) => {
           return f.buttons ? (
-            <Row className="justify-content-center">
+            <Row className="justify-content-center" key={i}>
               <Row className="justify-content-between">
                 {f?.buttons?.map((b, i) => {
                   if (!b.label) return;
@@ -65,6 +65,7 @@ const CForm = memo(
                       onClick={b.type === "submit" ? handleSubmit : b.onClick}
                       variant={b.variant}
                       loading={b.type === "submit" ? loading : b.loading}
+                      disabled={b.type === "submit" ? loading : b.loading}
                       label={b.label}
                     />
                   );
@@ -72,9 +73,9 @@ const CForm = memo(
               </Row>
             </Row>
           ) : (
-            <Row className="mt-2 justify-content-center">
+            <Row className="mt-2 justify-content-center" key={i}>
               {f.type === "select" ? (
-                <Col key={i} sm={f?.sm ?? 12} className="my-2">
+                <Col sm={f?.sm ?? 12} className="my-2">
                   <CSelect
                     label={t(f?.label)}
                     f={f}
@@ -141,7 +142,8 @@ const CForm = memo(
                     style={{ width: f.width ? "auto" : "100%" }}
                     onClick={f.doSubmit ? handleSubmit : f.onClick}
                     variant={f.variant}
-                    loading={f.type === "submit" ? loading : f.loading}
+                    loading={f.loading}
+                    disabled={f.loading}
                     label={f.label}
                   />
                 </Col>

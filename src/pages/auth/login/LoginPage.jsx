@@ -71,6 +71,7 @@ function LoginPage() {
       sm: 12,
       label: "login",
       type: "button",
+      loading: isLoading,
 
       variant: "contained",
       doSubmit: true,
@@ -84,7 +85,6 @@ function LoginPage() {
         data={data}
         setData={setData}
         title="login"
-        loading={isLoading}
         doSubmit={doSubmit}
       />
     </AuthLayout>
